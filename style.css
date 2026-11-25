@@ -1,0 +1,1650 @@
+/* =========================================
+   DESVINCULAÇÃO NARCISISTA
+   CLÁUDIA MENTORIA
+========================================= */
+
+:root {
+
+  /* IDENTIDADE COMPARTILHADA */
+
+  --wine: #210308;
+  --wine-dark: #140207;
+  --wine-2: #3a0712;
+  --wine-3: #581321;
+
+  --gold: #E8C77E;
+  --gold-light: #F3DDA8;
+  --gold-dark: #D6A65F;
+
+  --text-dark: #35131b;
+  --text-muted: #705a54;
+  --muted: #d2bdb2;
+
+  --serif: "Cormorant Garamond", Georgia, serif;
+  --sans: "Montserrat", Arial, sans-serif;
+
+  /* PALETA DESVINCULAÇÃO */
+
+  --cream: #f5efe5;
+  --cream-light: #fffaf3;
+  --off-white: #faf8f3;
+  --beige: #eee1d7;
+
+  --rose: #d8a5ae;
+  --rose-light: #f0d6d9;
+  --rose-accent: #c96d78;
+  --rose-accent-light: #e6a2a7;
+
+}
+
+
+/* =========================================
+   2. RESET
+========================================= */
+
+* {
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+
+html {
+
+  scroll-behavior: smooth;
+
+}
+
+
+body {
+
+  width: 100%;
+  min-height: 100vh;
+
+  overflow-x: hidden;
+
+  font-family: var(--sans);
+
+  color: var(--text-dark);
+
+}
+
+
+/* =========================================
+   3. PRIMEIRA SEÇÃO
+========================================= */
+
+.desv-hero {
+
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 10px 24px 25px;
+
+  overflow: hidden;
+
+  background-image: url("assets/fundo-rose.png");
+
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+}
+
+
+.desv-container {
+
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+  max-width: 950px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+}
+
+
+
+/* =========================================
+   4. MARCA CLÁUDIA MENTORIA
+========================================= */
+
+.desv-brand {
+    width: 100%;
+    max-width: 480px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 23px;
+
+    color: var(--gold);
+}
+
+/* FLOR CENTRALIZADA NO TOPO */
+
+.desv-brand-decoration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 5px;
+}
+
+.desv-flower {
+    width: 34px;
+    height: 29px;
+
+    flex-shrink: 0;
+
+    color: var(--rose-accent);
+}
+
+/* NOME COM LINHAS NAS LATERAIS */
+
+.desv-brand-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+
+    width: 100%;
+
+    font-family: var(--serif);
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 3.5px;
+
+    color: var(--rose-accent);
+    white-space: nowrap;
+}
+
+.desv-brand-name::before,
+.desv-brand-name::after {
+    content: "";
+
+    flex: 1;
+    height: 1px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--gold-dark),
+        var(--gold)
+    );
+}
+
+.desv-brand-name::after {
+    background: linear-gradient(
+        90deg,
+        var(--gold),
+        var(--gold-dark),
+        transparent
+    );
+}
+
+
+
+/* =========================================
+   5. HEADLINE PRINCIPAL
+========================================= */
+
+.desv-headline {
+
+  width: 100%;
+  max-width: 850px;
+
+}
+
+
+.desv-headline h1 {
+
+  font-family: var(--serif);
+
+  font-size: 62px;
+
+  line-height: 0.93;
+
+  font-weight: 700;
+
+  letter-spacing: -1px;
+
+  color: var(--text-dark);
+  max-width: 1000px;
+
+}
+
+
+/* =========================================
+   6. FRASE DE REVELAÇÃO
+========================================= */
+
+.desv-reveal {
+
+  position: relative;
+
+  display: inline-block;
+
+  overflow: hidden;
+
+  margin-top: 3px;
+
+}
+
+
+
+
+.desv-reveal-text {
+    display: block;
+    font-family: var(--sans);
+    font-size: 40px;
+    line-height: 0.94;
+    font-weight: 700;
+    font-style: oblique;
+    letter-spacing: -0.1px;
+
+    color: var(--rose-accent);
+
+    animation: desv-text-appearance 1.8s ease both;
+
+    max-width: 1000px;
+
+    transform: scaleY(1.22);
+    transform-origin: center;
+}
+
+
+
+@keyframes desv-text-appearance {
+
+  from {
+
+    clip-path: inset(0 100% 0 0);
+
+  }
+
+  to {
+
+    clip-path: inset(0 0 0 0);
+
+  }
+
+}
+
+
+/* =========================================
+   7. DIVISOR DOURADO
+========================================= */
+
+.desv-divider {
+
+  width: 100%;
+  max-width: 320px;
+
+  height: 11px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 10px 0 6px;
+
+}
+
+
+.desv-divider span {
+
+  width: 100%;
+  height: 2px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+
+    90deg,
+
+    transparent,
+    var(--gold-dark),
+    var(--gold),
+    transparent
+
+  );
+
+  transform: rotate(-1deg);
+
+}
+
+
+/* =========================================
+   8. TEXTO DA COPY
+========================================= */
+
+.desv-description {
+
+  width: 100%;
+  max-width: 720px;
+
+  font-family: var(--sans);
+
+  font-size: 20px;
+
+  line-height: 1.65;
+
+  font-weight: 400;
+
+  color: var(--text-dark);
+
+  margin: 5px 0 24px;
+
+}
+
+
+.desv-description strong {
+
+  font-weight: 700;
+
+}
+
+
+.desv-description span {
+
+  color: var(--rose-accent);
+  font-weight: 900;
+
+}
+
+
+/* =========================================
+   9. ESPAÇO DA VSL
+========================================= */
+
+.desv-video-area {
+
+  width: 100%;
+  max-width: 780px;
+
+}
+
+
+.desv-video-frame {
+
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 16 / 9;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  border: 2px solid var(--gold);
+
+  background: rgba(255, 250, 243, 0.16);
+
+  box-shadow:
+
+    0 0 0 1px rgba(243, 221, 168, 0.45),
+
+    0 8px 25px rgba(33, 3, 8, 0.13),
+
+    inset 0 0 12px rgba(243, 221, 168, 0.10);
+
+}
+
+/* VÍDEO DENTRO DA MOLDURA */
+
+.desv-video-frame video {
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  border-radius: inherit;
+
+}
+
+
+/* =========================================
+   10. BOTÃO PRINCIPAL
+========================================= */
+
+
+.desv-cta {
+
+  position: relative;
+
+  overflow: hidden;
+
+  isolation: isolate;
+
+  width: min(100%, 620px);
+
+  min-height: 72px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 18px;
+
+  margin: 26px auto 17px;
+
+  padding: 18px 30px;
+
+  border-radius: 100px;
+
+  border: 1px solid var(--gold-light);
+
+ background: linear-gradient(
+    110deg,
+    #d99139 0%,
+    #ffe0a0 48%,
+    #e4a34d 100%
+  );
+
+  color: var(--wine-dark);
+
+  text-decoration: none;
+
+  font-family: var(--sans);
+
+  font-size: 20px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+
+  box-shadow:
+    0 0 10px rgba(255, 202, 112, .65),
+    0 0 28px rgba(255, 165, 55, .35),
+    inset 0 2px 5px rgba(255, 255, 255, .65);
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease,
+    filter .25s ease;
+  cursor: pointer;
+
+}
+
+
+.desv-cta:hover {
+
+  transform: translateY(-3px);
+  filter: brightness(1.06);
+  box-shadow:
+    0 0 15px rgba(255, 202, 112, .8),
+    0 0 38px rgba(255, 165, 55, .45),
+    inset 0 2px 5px rgba(255, 255, 255, .7);
+
+}
+
+
+
+/* =========================================
+   11. COMPRA / PAGAMENTO / GARANTIA
+========================================= */
+
+.desv-assurances {
+
+  width: 100%;
+  max-width: 580px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 18px;
+
+  margin: 3px auto 25px;
+
+  color: var(--gold-light);
+
+}
+
+
+.desv-assurance {
+
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 9px;
+
+  color: var(--wine-dark);
+
+}
+
+
+.desv-assurance svg {
+
+  width: 43px;
+  height: 43px;
+
+  flex-shrink: 0;
+
+}
+
+
+.desv-assurance span {
+
+  font-family: var(--sans);
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  line-height: 1.45;
+
+  letter-spacing: 0.5px;
+
+  text-align: left;
+
+  color: var(--wine);
+
+}
+
+
+.desv-assurance-divider {
+
+  width: 1px;
+
+  height: 38px;
+
+  background: rgba(216, 163, 76, 0.65);
+
+  flex-shrink: 0;
+
+}
+
+
+/* =========================================
+   12. DECORAÇÃO INFERIOR
+========================================= */
+
+.desv-footer-decoration {
+
+  width: 100%;
+  max-width: 580px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 16px;
+
+  margin-top: 5px;
+
+}
+
+
+.desv-footer-line {
+
+  flex: 1;
+
+  height: 1px;
+
+  background: linear-gradient(
+
+    90deg,
+
+    transparent,
+    var(--gold-dark),
+    var(--rose-accent)
+
+  );
+
+}
+
+
+.desv-footer-line:last-child {
+
+  background: linear-gradient(
+
+    90deg,
+
+    var(--rose-accent),
+    var(--gold-dark),
+    transparent
+
+  );
+
+}
+
+
+.desv-footer-flower {
+
+  width: 38px;
+  height: 32px;
+
+  flex-shrink: 0;
+
+  color: var(--gold);
+
+}
+
+
+/* =========================================
+   13. FRASE FINAL
+========================================= */
+
+.desv-footer-phrase {
+
+  font-family: var(--serif);
+
+  font-size: 22px;
+
+  font-style: italic;
+
+  font-weight: 500;
+
+  color: var(--wine);
+
+  margin: 10px 0 17px;
+
+}
+
+
+/* =========================================
+   14. COPYRIGHT
+========================================= */
+
+.desv-initial-footer-slot {
+
+  width: 100%;
+
+}
+
+
+.desv-final-footer-slot {
+
+  width: 100%;
+
+}
+
+
+.desv-copyright {
+
+  width: 100%;
+
+  text-align: center;
+
+  font-family: var(--sans);
+
+  font-size: 11px;
+
+  letter-spacing: 0.4px;
+
+  color: var(--wine);
+
+  opacity: 0.8;
+
+  padding: 18px 10px;
+
+  background: #f2b1a5;
+
+}
+
+
+/* =========================================
+   15. PRÓXIMAS SEÇÕES
+========================================= */
+
+.desv-content {
+
+  display: none;
+
+  width: 100%;
+
+}
+
+
+.desv-content.released {
+
+  display: block;
+
+  animation: desv-content-animation 1s ease forwards;
+
+}
+
+
+@keyframes desv-content-animation {
+
+  from {
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+  }
+
+}
+
+
+.desv-sections {
+
+  width: 100%;
+
+}
+
+
+/* =========================================
+   SEGUNDA SEÇÃO - A RELAÇÃO TERMINOU
+========================================= */
+
+.desv-story {
+  position: relative;
+  isolation: isolate;
+
+  width: 100%;
+  min-height: 100vh;
+
+  overflow: clip;
+
+  background: var(--beige);
+}
+
+
+/* =========================================
+   FUNDO FIXO - FOTO DA CLÁUDIA
+========================================= */
+
+.desv-story-background {
+  position: sticky;
+  top: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  margin-bottom: -100vh;
+
+  overflow: hidden;
+
+  z-index: -1;
+}
+
+.desv-story-image {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center 10%;
+
+  transform: scale(1.04);
+}
+
+
+/* =========================================
+   SOBREPOSIÇÃO MARROM
+========================================= */
+
+.desv-story-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(74, 48, 39, 0.43),
+      rgba(105, 69, 57, 0.32),
+      rgba(54, 30, 29, 0.48)
+    );
+
+  z-index: 1;
+}
+
+
+/* =========================================
+   CONTEÚDO PRINCIPAL
+========================================= */
+
+.desv-story-content {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: none;
+
+  margin: 75px 0 0;
+
+  padding: 45px 7% 65px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  gap: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(250, 248, 243, 0.97),
+      rgba(242, 232, 222, 0.96)
+    );
+
+  border: none;
+  border-radius: 0;
+
+  box-shadow:
+    0 15px 50px rgba(31, 14, 12, 0.18);
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+
+/* =========================================
+   BLOCOS INTERNOS
+========================================= */
+
+.desv-story-card {
+  position: relative;
+
+  width: 100%;
+  min-height: auto;
+
+  margin: 0;
+
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  background: transparent;
+
+  border: none;
+  border-radius: 0;
+
+  box-shadow: none;
+
+  backdrop-filter: none;
+}
+
+
+/* =========================================
+   ABERTURA - TÍTULO
+========================================= */
+
+.desv-story-card-intro {
+  width: 100%;
+
+  padding: 20px 20px 30px;
+
+  margin-bottom: 20px;
+}
+
+.desv-story-eyebrow {
+  font-family: var(--sans);
+
+  font-size: 12px;
+  font-weight: 600;
+
+  letter-spacing: 4px;
+
+  color: var(--rose-accent);
+
+  margin-bottom: 24px;
+}
+
+
+/* =========================================
+   TÍTULO PRINCIPAL
+========================================= */
+
+.desv-story-card-intro h2 {
+  max-width: 700px;
+
+  font-family: var(--serif);
+
+  font-size: 40px;
+
+  line-height: 1.08;
+
+  font-weight: 600;
+
+  color: var(--text-dark);
+
+  text-transform: uppercase;
+}
+
+.desv-story-card-intro h2 span {
+  display: block;
+
+  margin-top: 12px;
+
+  color: var(--rose-accent);
+
+  font-style: italic;
+}
+
+
+/* =========================================
+   CARD ÚNICO DOS TEXTOS
+========================================= */
+
+.desv-story-text-card {
+
+  width: 100%;
+  max-width: 1150px;
+
+  margin: 0 auto;
+
+  padding: 32px 65px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(232, 215, 204, 0.65),
+      rgba(245, 235, 226, 0.78)
+    );
+
+  border: 1px solid rgba(183, 123, 131, 0.16);
+
+  border-radius: 5px;
+
+  box-shadow:
+    0 8px 25px rgba(65, 35, 35, 0.06);
+}
+
+
+/* =========================================
+   PARÁGRAFOS DENTRO DO CARD
+========================================= */
+
+.desv-story-text-card p,
+.desv-story-card p {
+
+  width: 100%;
+  max-width: 700px;
+
+  margin: 0;
+
+  font-family: var(--sans);
+
+  font-size: 20px;
+
+  line-height: 1.75;
+
+  font-weight: 400;
+
+  color: var(--text-dark);
+
+  text-align: center;
+}
+
+
+/* =========================================
+   DIVISOR
+========================================= */
+
+.desv-story-divider {
+  display: none;
+}
+
+
+/* =========================================
+   ENCERRAMENTO
+========================================= */
+
+.desv-story-card-ending {
+
+  width: 100%;
+
+  padding: 35px 20px 15px;
+
+  margin-top: 15px;
+
+}
+
+.desv-story-small-detail {
+
+  font-family: var(--sans);
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 3px;
+
+  color: var(--rose-accent);
+
+  margin-bottom: 18px;
+}
+
+.desv-story-card-ending h3 {
+
+  max-width: 850px;
+
+  font-family: var(--serif);
+
+  font-size: clamp(28px, 3.5vw, 43px);
+
+  line-height: 1.15;
+
+  font-weight: 600;
+
+  color: var(--text-dark);
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 850px) {
+
+  .desv-story-content {
+    margin-top: 60px;
+
+    padding: 40px 5% 55px;
+  }
+
+  .desv-story-card-intro {
+    padding: 15px 10px 25px;
+  }
+
+  .desv-story-text-card {
+    padding: 30px 35px;
+    gap: 16px;
+  }
+
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 600px) {
+
+  .desv-story-content {
+    margin-top: 45px;
+
+    padding: 30px 5% 45px;
+  }
+
+  .desv-story-card-intro {
+    padding: 15px 5px 20px;
+
+    margin-bottom: 15px;
+  }
+
+  .desv-story-eyebrow {
+    font-size: 10px;
+    letter-spacing: 3px;
+
+    margin-bottom: 18px;
+  }
+
+  .desv-story-card-intro h2 {
+    font-size: clamp(27px, 8vw, 36px);
+  }
+
+  .desv-story-card-intro h2 span {
+    margin-top: 10px;
+  }
+
+  .desv-story-text-card {
+    padding: 25px 20px;
+
+    gap: 15px;
+  }
+
+  .desv-story-text-card p,
+  .desv-story-card p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .desv-story-card-ending {
+    padding: 28px 10px 10px;
+  }
+
+  .desv-story-card-ending h3 {
+    font-size: 27px;
+  }
+
+}
+
+
+
+/* =========================================
+   16. TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+
+  .desv-hero {
+
+    padding: 32px 20px 24px;
+
+  }
+
+
+  .desv-brand {
+
+    max-width: 400px;
+
+    margin-bottom: 20px;
+
+  }
+
+
+  .desv-brand-name {
+
+    font-size: 17px;
+
+    letter-spacing: 3px;
+
+  }
+
+
+  .desv-flower {
+
+    width: 42px;
+    height: 34px;
+
+  }
+
+
+  .desv-headline h1 {
+
+    font-size: clamp(40px, 8vw, 59px);
+
+  }
+
+
+  .desv-reveal-text {
+
+    font-size: clamp(38px, 7.8vw, 58px);
+
+  }
+
+
+  .desv-divider {
+
+    max-width: 280px;
+
+    margin: 9px 0 6px;
+
+  }
+
+
+  .desv-description {
+
+    font-size: 15px;
+
+    margin: 5px 0 22px;
+
+  }
+
+
+  .desv-video-frame {
+
+    border-radius: 16px;
+
+  }
+
+
+  .desv-cta {
+
+    min-height: 64px;
+
+    font-size: 17px;
+
+    gap: 14px;
+
+    padding: 16px 22px;
+
+    margin-top: 22px;
+
+  }
+
+
+  .desv-assurances {
+
+    max-width: 500px;
+
+    gap: 12px;
+
+  }
+
+
+  .desv-assurance svg {
+
+    width: 32px;
+    height: 32px;
+
+  }
+
+
+  .desv-assurance span {
+
+    font-size: 9px;
+
+  }
+
+
+  .desv-footer-phrase {
+
+    font-size: 20px;
+
+  }
+
+}
+
+
+/* =========================================
+   17. CELULAR - 600PX
+========================================= */
+
+@media (max-width: 600px) {
+
+
+  .desv-hero {
+
+    padding: 28px 18px 22px;
+
+  }
+
+
+  .desv-brand-decoration {
+
+    gap: 10px;
+
+  }
+
+
+  .desv-brand-name {
+
+    font-size: 16px;
+
+    letter-spacing: 2.5px;
+
+  }
+
+
+  .desv-tag {
+
+    font-size: 10px;
+
+    letter-spacing: 1.4px;
+
+    padding: 8px 18px;
+
+  }
+
+
+  .desv-headline h1 {
+
+    font-size: clamp(36px, 9vw, 49px);
+
+    line-height: 0.95;
+
+  }
+
+
+  .desv-reveal-text {
+
+    font-size: clamp(34px, 8.8vw, 47px);
+
+    line-height: 0.96;
+
+  }
+
+
+  .desv-divider {
+
+    max-width: 250px;
+
+    margin: 8px 0 5px;
+
+  }
+
+
+  .desv-description {
+
+    font-size: 14.5px;
+
+    line-height: 1.6;
+
+    margin: 5px 0 20px;
+
+  }
+
+
+  .desv-video-frame {
+
+    border-radius: 14px;
+
+  }
+
+
+  .desv-cta {
+
+    min-height: 61px;
+
+    font-size: 16px;
+
+    gap: 10px;
+
+    padding: 15px 15px;
+
+    margin-top: 21px;
+
+  }
+
+
+  .desv-cta svg {
+
+    width: 21px;
+    height: 21px;
+
+  }
+
+
+  .desv-assurances {
+
+    gap: 8px;
+
+    margin: 4px auto 22px;
+
+  }
+
+
+  .desv-assurance {
+
+    gap: 5px;
+
+  }
+
+
+  .desv-assurance svg {
+
+    width: 28px;
+    height: 28px;
+
+  }
+
+
+  .desv-assurance span {
+
+    font-size: 8px;
+
+    letter-spacing: 0.2px;
+
+  }
+
+
+  .desv-assurance-divider {
+
+    height: 30px;
+
+  }
+
+
+  .desv-footer-decoration {
+
+    gap: 10px;
+
+  }
+
+
+  .desv-footer-flower {
+
+    width: 32px;
+
+  }
+
+
+  .desv-footer-phrase {
+
+    font-size: 19px;
+
+  }
+
+
+  .desv-copyright {
+
+    font-size: 10px;
+
+  }
+
+}
+
+
+/* =========================================
+   18. CELULAR - 400PX
+========================================= */
+
+@media (max-width: 400px) {
+
+
+  .desv-hero {
+
+    padding: 25px 14px 20px;
+
+  }
+
+
+  .desv-brand-name {
+
+    font-size: 15px;
+
+    letter-spacing: 2px;
+
+  }
+
+
+  .desv-flower {
+
+    width: 36px;
+    height: 31px;
+
+  }
+
+
+  .desv-headline h1 {
+
+    font-size: 34px;
+
+  }
+
+
+  .desv-reveal-text {
+
+    font-size: 32px;
+
+  }
+
+
+  .desv-description {
+
+    font-size: 13.5px;
+
+    line-height: 1.6;
+
+  }
+
+
+  .desv-cta {
+
+    font-size: 14px;
+
+    gap: 8px;
+
+    padding: 14px 12px;
+
+  }
+
+
+  .desv-assurances {
+
+    gap: 5px;
+
+  }
+
+
+  .desv-assurance {
+
+    gap: 4px;
+
+  }
+
+
+  .desv-assurance svg {
+
+    width: 24px;
+    height: 24px;
+
+  }
+
+
+  .desv-assurance span {
+
+    font-size: 7px;
+
+  }
+
+
+  .desv-assurance-divider {
+
+    height: 27px;
+
+  }
+
+
+  .desv-footer-phrase {
+
+    font-size: 17px;
+
+  }
+
+
+  .desv-copyright {
+
+    font-size: 9px;
+
+  }
+
+}
+
+
+/* =========================================
+   19. CELULARES MUITO PEQUENOS
+========================================= */
+
+@media (max-width: 340px) {
+
+
+  .desv-headline h1 {
+
+    font-size: 31px;
+
+  }
+
+
+  .desv-reveal-text {
+
+    font-size: 29px;
+
+  }
+
+
+  .desv-assurances {
+
+    gap: 3px;
+
+  }
+
+
+  .desv-assurance svg {
+
+    width: 22px;
+    height: 22px;
+
+  }
+
+
+  .desv-assurance span {
+
+    font-size: 6.5px;
+
+  }
+
+
+  .desv-cta {
+
+    font-size: 13px;
+
+  }
+
+}
+
+
+/* =========================================
+   20. ACESSIBILIDADE
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+
+  .desv-reveal-text {
+
+    animation-duration: 0.01ms;
+
+  }
+
+
+  html {
+
+    scroll-behavior: auto;
+
+  }
+
+}
