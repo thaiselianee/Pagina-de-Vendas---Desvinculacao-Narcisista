@@ -6,7 +6,6 @@
   // =========================================
 
   const content = document.querySelector("#desv-content");
-  const cta = document.querySelector("#desv-cta");
   const copyright = document.querySelector("#desv-copyright");
   const initialFooterSlot = document.querySelector("#desv-initial-footer-slot");
   const finalFooterSlot = document.querySelector("#desv-final-footer-slot");
@@ -20,7 +19,6 @@
 
   if (
     !content ||
-    !cta ||
     !copyright ||
     !initialFooterSlot ||
     !finalFooterSlot ||
@@ -35,9 +33,6 @@
   // =========================================
 
   const RELEASE_SECONDS = 5;
-
-  const HOTMART_LINK =
-    "https://pay.hotmart.com/N108676465E?off=yqfgemwo";
 
   // =========================================
   // ESTADO
@@ -82,43 +77,6 @@
   video.addEventListener("ended", () => {
 
     releaseSections();
-
-  });
-
-  // =========================================
-  // CTA DE MOVIMENTAÇÃO
-  // =========================================
-
-  cta.addEventListener("click", (event) => {
-
-    event.preventDefault();
-
-    if (!released) return;
-
-    content.scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    });
-
-  });
-
-  // =========================================
-  // BOTÕES DE COMPRA
-  // =========================================
-
-  const buyButtons = document.querySelectorAll(
-    '[href="#comprar"], .desv-buy-button, [data-buy], .desv-offer-button, .desv-closing-button'
-  );
-
-  buyButtons.forEach((button) => {
-
-    button.addEventListener("click", (event) => {
-
-      event.preventDefault();
-
-      window.location.href = HOTMART_LINK;
-
-    });
 
   });
 
