@@ -2095,39 +2095,24 @@ display: none;
 }
 
 
-
 /* =====================================================
-   RESPONSIVIDADE — DESVINCULAÇÃO NARCISISTA
-
-   1. Até 1000px — Tablets e notebooks menores
-   2. Até 600px  — Celulares
-   3. Até 400px  — Celulares menores
-===================================================== */
-
-
-/* =====================================================
-   1. TABLETS E NOTEBOOKS MENORES — 1000px
+   1. TABLETS E NOTEBOOKS — ATÉ 1000px
 ===================================================== */
 
 @media (max-width: 1000px) {
 
-    /* =====================================
-       VSL — ESTRUTURA CENTRALIZADA
-    ===================================== */
+    /* VSL */
 
     .desv-hero {
-        min-height: auto;
-        padding: 45px 30px 0;
-        background-position: center center;
+        min-height: 100vh;
+        padding: 35px 28px 0;
     }
 
     .desv-container {
         width: 100%;
         max-width: 760px;
 
-        display: grid;
-
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
 
         grid-template-areas:
             "brand"
@@ -2143,63 +2128,61 @@ display: none;
 
         column-gap: 0;
         row-gap: 0;
-
         text-align: center;
     }
 
     .desv-brand {
-        max-width: 430px;
-        margin: 0 auto 24px;
+        max-width: 400px;
+        margin: 0 auto 20px;
     }
 
     .desv-brand-name {
-        font-size: 19px;
-        gap: 20px;
+        font-size: 18px;
+        gap: 18px;
     }
 
     .desv-headline {
         width: 100%;
-        max-width: 760px;
+        max-width: 720px;
         margin: 0 auto;
         text-align: center;
     }
 
     .desv-headline h1 {
-        font-size: clamp(38px, 5vw, 48px);
-        line-height: 1.08;
+        max-width: 100%;
         margin-top: 0;
-        letter-spacing: -0.6px;
+        font-family: var(--serif);
+        font-size: clamp(35px, 4.5vw, 43px);
+        line-height: 1.08;
+        text-align: center;
+        text-wrap: balance;
     }
 
     .desv-reveal {
         display: block;
         width: 100%;
-        margin-top: 12px;
+        margin-top: 10px;
     }
 
     .desv-reveal-text {
-        font-size: clamp(30px, 4vw, 38px);
-        line-height: 1.08;
+        font-size: clamp(32px, 4.2vw, 40px);
+        line-height: 1.1;
         text-align: center;
         transform: none;
+        white-space: normal;
     }
 
     .desv-description {
-        width: 100%;
         max-width: 680px;
-
         margin: 18px auto 24px;
-
         font-size: 16px;
-        line-height: 1.65;
-
+        line-height: 1.7;
         text-align: center;
     }
 
     .desv-video-area {
         width: 100%;
         max-width: 680px;
-
         margin: 0 auto;
     }
 
@@ -2212,63 +2195,41 @@ display: none;
     .desv-cta {
         width: 100%;
         max-width: 580px;
-
-        min-height: 60px;
-
-        margin: 24px auto 18px;
-
-        font-size: 16px;
+        min-height: 64px;
+        margin: 22px auto 17px;
+        font-size: 17px;
     }
 
     .desv-assurances {
-        width: 100%;
         max-width: 560px;
-
-        margin: 5px auto 20px;
-
+        margin: 0 auto 18px;
         gap: 12px;
     }
 
     .desv-assurance svg {
-        width: 32px;
-        height: 32px;
+        width: 33px;
+        height: 33px;
     }
 
     .desv-assurance span {
-        font-size: 9px;
+        font-size: 10px;
     }
 
     .desv-footer-phrase {
-        font-size: 21px;
-        margin: 15px auto 22px;
+        font-size: 22px;
+        margin: 12px auto 18px;
         text-align: center;
-    }
-
-    .desv-initial-footer-slot {
-        width: 100vw;
-        margin-left: calc(50% - 50vw);
     }
 
     .desv-copyright {
         font-size: 12px;
-        padding: 16px 12px;
     }
 
 
-    /* =====================================
-       FUNDO E CARDS DA HISTÓRIA
-    ===================================== */
-
-    .desv-story-background {
-        height: 100vh;
-        height: 100svh;
-    }
+    /* HISTÓRIA E CARDS */
 
     .desv-story-content {
-        max-width: 850px;
-
         padding: 65px 5% 80px;
-
         gap: 38px;
     }
 
@@ -2278,38 +2239,24 @@ display: none;
     .desv-story-card-process {
         width: 100%;
         max-width: 760px;
-
         margin: 0;
-
-        padding: 38px 36px;
-
+        padding: 36px 34px;
         border-radius: 19px;
     }
 
-    .desv-story-card h2,
-    .desv-story-card-intro h2 {
-        max-width: 100%;
-        font-size: 28px;
-        line-height: 1.15;
+    .desv-story-card h2 {
+        font-size: 29px;
+        line-height: 1.17;
+        text-wrap: balance;
     }
 
     .desv-story-card p {
-        max-width: 100%;
-        font-size: 14px;
+        font-size: 15px;
         line-height: 1.75;
-    }
-
-    .desv-story-list {
-        gap: 10px;
     }
 
     .desv-story-list li {
         font-size: 14px;
-        padding: 14px 18px 14px 42px;
-    }
-
-    .desv-process-step {
-        padding: 18px 20px;
     }
 
     .desv-process-step h3 {
@@ -2321,13 +2268,11 @@ display: none;
     }
 
 
-    /* =====================================
-       BÔNUS MULHER RESTAURADA
-    ===================================== */
+    /* BÔNUS */
 
     .desv-bonus-section {
-        padding: 50px 5% 60px;
-        gap: 22px;
+        padding: 48px 5% 58px;
+        gap: 23px;
     }
 
     .desv-bonus-header h2 {
@@ -2336,7 +2281,7 @@ display: none;
 
     .desv-bonus-card {
         max-width: 680px;
-        padding: 36px 35px;
+        padding: 35px;
     }
 
     .desv-bonus-card h3 {
@@ -2344,26 +2289,20 @@ display: none;
     }
 
     .desv-bonus-card p {
-        font-size: 14px;
+        font-size: 15px;
         line-height: 1.75;
     }
 
-    .desv-bonus-note {
-        font-size: 12px;
-    }
 
-
-    /* =====================================
-       OFERTA
-    ===================================== */
+    /* OFERTA */
 
     .desv-offer-section {
-        padding: 50px 5% 65px;
+        padding: 48px 5% 60px;
         gap: 24px;
     }
 
     .desv-offer-heading h2 {
-        font-size: 35px;
+        font-size: 36px;
     }
 
     .desv-offer-card {
@@ -2372,33 +2311,27 @@ display: none;
     }
 
     .desv-offer-item-content h3 {
-        font-size: 20px;
+        font-size: 21px;
     }
 
     .desv-offer-item-content p {
-        font-size: 13px;
+        font-size: 14px;
     }
 
     .desv-offer-price-value {
-        font-size: 52px;
-    }
-
-    .desv-offer-button {
-        font-size: 16px;
+        font-size: 54px;
     }
 
 
-    /* =====================================
-       PERGUNTAS FREQUENTES
-    ===================================== */
+    /* FAQ */
 
     .desv-faq-section {
-        padding: 55px 5% 55px;
-        gap: 24px;
+        padding: 55px 5%;
+        gap: 25px;
     }
 
     .desv-faq-heading h2 {
-        font-size: 33px;
+        font-size: 34px;
     }
 
     .desv-faq-carousel {
@@ -2416,66 +2349,59 @@ display: none;
     }
 
     .desv-faq-card h3 {
-        font-size: 24px;
+        font-size: 25px;
     }
 
     .desv-faq-answer p {
-        font-size: 13px;
+        font-size: 14px;
         line-height: 1.75;
     }
 
 
-    /* =====================================
-       FECHAMENTO
-    ===================================== */
+    /* FECHAMENTO */
 
     .desv-closing-section {
         padding: 55px 5%;
-        gap: 20px;
     }
 
     .desv-closing-content {
         max-width: 680px;
-        padding: 40px 38px;
-        gap: 17px;
+        padding: 40px 35px;
     }
 
     .desv-closing-content h2 {
-        font-size: 36px;
+        font-size: 37px;
     }
 
     .desv-closing-content > p:not(.desv-closing-eyebrow) {
-        font-size: 14px;
-    }
-
-    .desv-closing-product {
-        font-size: 23px;
-    }
-
-    .desv-closing-price {
-        font-size: 46px;
-    }
-
-    .desv-closing-button {
-        font-size: 16px;
+        font-size: 15px;
     }
 
 }
 
 
 /* =====================================================
-   2. CELULARES — 600px
+   2. CELULARES — ATÉ 600px
 ===================================================== */
 
 @media (max-width: 600px) {
 
     /* =====================================
-       VSL — MOBILE
+       VSL
     ===================================== */
 
     .desv-hero {
-        min-height: auto;
-        padding: 30px 18px 0;
+        width: 100%;
+        min-height: 100vh;
+        min-height: 100svh;
+
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+
+        padding: 17px 17px 0;
+
+        box-sizing: border-box;
 
         background-position: center center;
         background-size: cover;
@@ -2485,105 +2411,174 @@ display: none;
         width: 100%;
         max-width: 480px;
 
+        min-height: calc(100vh - 17px);
+        min-height: calc(100svh - 17px);
+
+        display: grid;
+
         grid-template-columns: minmax(0, 1fr);
 
+        grid-template-areas:
+            "brand"
+            "headline"
+            "divider"
+            "description"
+            "video"
+            "cta"
+            "assurances"
+            "footer-decoration"
+            "phrase"
+            "copyright";
+
+        align-content: space-between;
+        align-items: center;
+        justify-items: center;
+
+        column-gap: 0;
         row-gap: 0;
+
+        padding: 0;
+        text-align: center;
+        box-sizing: border-box;
     }
+
 
     /* MARCA */
 
     .desv-brand {
-        max-width: 320px;
-        margin-bottom: 21px;
+        width: 100%;
+        max-width: 310px;
+        margin: 0 auto 13px;
     }
 
     .desv-brand-decoration {
-        margin-bottom: 4px;
+        margin-bottom: 3px;
     }
 
     .desv-flower {
-        width: 27px;
+        width: 28px;
         height: 25px;
     }
 
     .desv-brand-name {
         gap: 13px;
-
         font-size: 16px;
         letter-spacing: 2.5px;
     }
 
-    /* TÍTULO */
+
+    /* TÍTULO PRINCIPAL */
 
     .desv-headline {
+        width: 100%;
         max-width: 100%;
+        margin: 0 auto;
         text-align: center;
     }
 
     .desv-headline h1 {
-        margin-top: 0;
+        width: 100%;
+        max-width: 100%;
 
-        font-size: clamp(30px, 7vw, 37px);
+        margin: 0 auto;
 
-        line-height: 1.08;
-        letter-spacing: -0.5px;
+        font-family: emogi;
+
+        font-size: 28px;
+
+        line-height: 1.1;
+        letter-spacing: -0.45px;
 
         text-align: center;
+        text-wrap: balance;
+        font-weight: 900;
     }
 
+
+    /* FRASE ROSA — DIGITAÇÃO */
+
     .desv-reveal {
+        position: relative;
+        display: block;
+
         width: 100%;
-        margin-top: 9px;
+        margin: 11px auto 0;
+
+        overflow: hidden;
+        text-align: center;
     }
 
     .desv-reveal-text {
-        font-size: clamp(23px, 5.8vw, 29px);
+        display: block;
+
+        width: 100%;
+        margin: 0 auto;
+
+        font-family: var(--sans);
+
+        font-size: 34px;
 
         line-height: 1.12;
-        letter-spacing: -0.3px;
+        font-weight: 800;
+        letter-spacing: -0.7px;
 
         text-align: center;
         transform: none;
+        transform-origin: center;
+
+        text-wrap: balance;
     }
 
-    /* COPY */
+
+    /* TEXTO DESCRITIVO */
 
     .desv-description {
+        width: 100%;
         max-width: 100%;
 
-        margin: 16px auto 21px;
+        margin: -10px auto 5px;
 
-        font-size: 14px;
+        font-size: 15px;
         line-height: 1.65;
 
         text-align: center;
     }
+
 
     /* VÍDEO */
 
     .desv-video-area {
         width: 100%;
         max-width: 100%;
-
         margin: 0 auto;
+        justify-self: center;
     }
 
     .desv-video-frame {
+        position: relative;
+
         width: 100%;
 
-        aspect-ratio: 16 / 9;
+        aspect-ratio: 1.55 / 1;
 
-        margin-top: 0;
+        margin: 0;
+        overflow: hidden;
 
         border-radius: 13px;
         border-width: 1.5px;
+        margin-bottom: 10px;
     }
 
     .desv-video-frame video {
+        display: block;
+
         width: 100%;
         height: 100%;
+
         object-fit: cover;
+        border-radius: inherit;
     }
+
 
     /* BOTÃO PRINCIPAL */
 
@@ -2591,53 +2586,65 @@ display: none;
         width: 100%;
         max-width: 100%;
 
-        min-height: 55px;
+        min-height: 65px;
 
-        margin: 21px auto 15px;
+        margin: 17px auto 13px;
 
-        padding: 14px 17px;
-
-        font-size: 14px;
-        line-height: 1.3;
-        letter-spacing: 0.2px;
+        padding: 14px 16px;
 
         gap: 8px;
+
+        font-size: 16px;
+        font-weight: 700;
+
+        line-height: 1.3;
+        letter-spacing: 0.2px;
     }
 
-    /* INFORMAÇÕES DE COMPRA */
+
+    /* COMPRA / PAGAMENTO / GARANTIA */
 
     .desv-assurances {
         width: 100%;
         max-width: 100%;
 
+        display: flex;
+
         justify-content: center;
+        align-items: center;
 
-        gap: 7px;
+        gap: 6px;
 
-        margin: 5px auto 17px;
+        margin: 0 auto 8px;
     }
 
     .desv-assurance {
         flex: 1;
         min-width: 0;
 
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
         gap: 5px;
     }
 
     .desv-assurance svg {
-        width: 26px;
-        height: 26px;
+        width: 25px;
+        height: 25px;
     }
 
     .desv-assurance span {
         font-size: 8px;
-        line-height: 1.4;
+        line-height: 1.35;
         letter-spacing: 0;
     }
 
     .desv-assurance-divider {
-        height: 29px;
+        height: 27px;
     }
+
 
     /* FRASE FINAL */
 
@@ -2646,7 +2653,7 @@ display: none;
     }
 
     .desv-footer-phrase {
-        margin: 12px auto 20px;
+        margin: 8px auto 10px;
 
         font-size: 18px;
         line-height: 1.3;
@@ -2654,25 +2661,43 @@ display: none;
         text-align: center;
     }
 
-    /* COPYRIGHT */
+
+    /* RODAPÉ — CORREÇÃO DAS LATERAIS */
 
     .desv-initial-footer-slot {
-        width: 100vw;
-        margin-left: calc(50% - 50vw);
+        position: relative;
+
+        width: calc(100% + 34px);
+        max-width: none;
+
+        margin-left: -17px;
+        margin-right: -17px;
+
+        padding: 0;
+
+        box-sizing: border-box;
     }
 
     .desv-copyright {
-        width: 100%;
+        display: block;
 
-        padding: 15px 12px;
+        width: 100%;
+        max-width: none;
+
+        margin: 0;
+        padding: 13px 10px;
+
+        box-sizing: border-box;
 
         font-size: 11px;
         line-height: 1.5;
+
+        text-align: center;
     }
 
 
     /* =====================================
-       FUNDO DA CLÁUDIA
+       FUNDO E CARDS DA HISTÓRIA
     ===================================== */
 
     .desv-story-background {
@@ -2696,14 +2721,12 @@ display: none;
             );
     }
 
-    /* CARDS */
-
     .desv-story-content {
         width: 100%;
 
-        padding: 35px 16px 50px;
+        padding: 35px 16px 48px;
 
-        gap: 25px;
+        gap: 23px;
     }
 
     .desv-story-card,
@@ -2716,44 +2739,39 @@ display: none;
         min-height: auto;
 
         margin: 0;
+        padding: 27px 19px;
 
-        padding: 27px 20px;
-
-        gap: 15px;
+        gap: 14px;
 
         border-radius: 16px;
     }
 
-    /* TÍTULOS DOS CARDS */
-
-    .desv-story-card h2,
-    .desv-story-card-intro h2 {
+    .desv-story-card h2 {
         width: 100%;
         max-width: 100%;
 
-        font-size: 23px;
-        line-height: 1.16;
+        font-size: 24px;
+        line-height: 1.2;
 
         letter-spacing: -0.2px;
 
         text-align: center;
-
         text-wrap: balance;
     }
 
-    /* TEXTOS DOS CARDS */
+    .desv-story-card-intro h2 {
+        font-size: 23px;
+    }
 
     .desv-story-card p {
         width: 100%;
         max-width: 100%;
 
-        font-size: 13.5px;
+        font-size: 14.5px;
         line-height: 1.7;
 
         text-align: center;
     }
-
-    /* LISTAS */
 
     .desv-story-list {
         gap: 9px;
@@ -2763,7 +2781,7 @@ display: none;
     .desv-story-list li {
         padding: 12px 13px 12px 35px;
 
-        font-size: 13px;
+        font-size: 14px;
         line-height: 1.6;
 
         border-radius: 10px;
@@ -2772,17 +2790,12 @@ display: none;
     .desv-story-list li::before {
         left: 14px;
         top: 19px;
-
-        width: 6px;
-        height: 6px;
     }
-
-    /* ETAPAS */
 
     .desv-process-step {
         width: 100%;
 
-        padding: 15px 15px;
+        padding: 15px;
 
         gap: 8px;
 
@@ -2795,17 +2808,17 @@ display: none;
     }
 
     .desv-process-step p {
-        font-size: 13px;
+        font-size: 14px;
         line-height: 1.65;
     }
 
 
     /* =====================================
-       BÔNUS MULHER RESTAURADA
+       BÔNUS — MULHER RESTAURADA
     ===================================== */
 
     .desv-bonus-section {
-        padding: 42px 17px 48px;
+        padding: 42px 16px 48px;
         gap: 20px;
     }
 
@@ -2831,7 +2844,7 @@ display: none;
         width: 100%;
         max-width: 100%;
 
-        padding: 29px 21px;
+        padding: 29px 20px;
 
         gap: 14px;
 
@@ -2841,7 +2854,7 @@ display: none;
     .desv-bonus-tag {
         padding: 7px 15px;
 
-        font-size: 9px;
+        font-size: 10px;
         letter-spacing: 1.5px;
     }
 
@@ -2851,14 +2864,14 @@ display: none;
     }
 
     .desv-bonus-card p {
-        font-size: 13.5px;
+        font-size: 14.5px;
         line-height: 1.7;
     }
 
     .desv-bonus-note {
         padding: 13px 14px;
 
-        font-size: 12px;
+        font-size: 13.5px;
         line-height: 1.6;
     }
 
@@ -2868,8 +2881,8 @@ display: none;
     ===================================== */
 
     .desv-offer-section {
-        padding: 42px 16px 50px;
-        gap: 22px;
+        padding: 42px 15px 48px;
+        gap: 21px;
     }
 
     .desv-offer-heading {
@@ -2887,7 +2900,7 @@ display: none;
         width: 100%;
         max-width: 100%;
 
-        padding: 23px 17px;
+        padding: 23px 16px;
 
         border-radius: 17px;
     }
@@ -2905,8 +2918,9 @@ display: none;
     }
 
     .desv-offer-item {
-        padding: 13px 12px;
-        gap: 11px;
+        padding: 13px 11px;
+
+        gap: 10px;
 
         border-radius: 11px;
     }
@@ -2926,8 +2940,8 @@ display: none;
     .desv-offer-item-content p {
         margin-top: 5px;
 
-        font-size: 13px;
-        line-height: 1.6;
+        font-size: 14px;
+        line-height: 1.65;
     }
 
     .desv-offer-price {
@@ -2951,19 +2965,23 @@ display: none;
     }
 
     .desv-offer-price p {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .desv-offer-button {
         width: 100%;
-        min-height: 54px;
+
+        min-height: 57px;
 
         margin-top: 17px;
-        padding: 13px 15px;
 
-        font-size: 13px;
-        line-height: 1.35;
-        letter-spacing: 0.3px;
+        padding: 14px 15px;
+
+        font-size: 15px;
+        font-weight: 700;
+
+        line-height: 1.4;
+        letter-spacing: 0.2px;
     }
 
 
@@ -2972,8 +2990,7 @@ display: none;
     ===================================== */
 
     .desv-faq-section {
-        padding: 38px 16px 42px;
-
+        padding: 38px 15px 42px;
         gap: 19px;
     }
 
@@ -2987,12 +3004,12 @@ display: none;
     }
 
     .desv-faq-heading p {
-        font-size: 12.5px;
+        font-size: 14px;
     }
 
-    /* CARROSSEL MAIS LARGO */
-
     .desv-faq-carousel {
+        position: relative;
+
         width: 100%;
         max-width: 100%;
 
@@ -3004,29 +3021,27 @@ display: none;
         max-width: 100%;
     }
 
-    /* CARD MAIS RETANGULAR E MENOS ALTO */
-
     .desv-faq-card {
         width: 100%;
 
         min-height: 215px;
 
-        padding: 29px 39px;
+        padding: 28px 38px;
 
-        border-radius: 17px;
+        border-radius: 16px;
     }
 
     .desv-faq-number {
         margin-bottom: 13px;
 
-        font-size: 9px;
+        font-size: 10px;
         letter-spacing: 2px;
     }
 
     .desv-faq-card h3 {
         max-width: 100%;
 
-        margin-bottom: 13px;
+        margin-bottom: 12px;
 
         font-size: 21px;
         line-height: 1.25;
@@ -3037,16 +3052,15 @@ display: none;
     }
 
     .desv-faq-answer p {
-        font-size: 13px;
-        line-height: 1.65;
+        font-size: 14px;
+        line-height: 1.7;
     }
-
-    /* SETAS NAS LATERAIS */
 
     .desv-faq-arrow {
         position: absolute;
 
         top: 50%;
+
         z-index: 4;
 
         width: 31px;
@@ -3096,8 +3110,7 @@ display: none;
     ===================================== */
 
     .desv-closing-section {
-        padding: 42px 16px;
-
+        padding: 42px 15px;
         gap: 15px;
     }
 
@@ -3105,7 +3118,7 @@ display: none;
         width: 100%;
         max-width: 100%;
 
-        padding: 31px 21px;
+        padding: 31px 20px;
 
         gap: 15px;
 
@@ -3119,17 +3132,16 @@ display: none;
 
     .desv-closing-content h2 {
         font-size: 32px;
-        line-height: 1.1;
+        line-height: 1.12;
     }
 
     .desv-closing-content > p:not(.desv-closing-eyebrow) {
-        font-size: 13.5px;
+        font-size: 14.5px;
         line-height: 1.7;
     }
 
     .desv-closing-product {
         margin-top: 5px;
-
         font-size: 21px;
     }
 
@@ -3142,57 +3154,49 @@ display: none;
     }
 
     .desv-closing-price span {
-        font-size: 11px;
+        font-size: 12px;
     }
 
     .desv-closing-button {
         width: 100%;
         max-width: 100%;
 
-        min-height: 54px;
+        min-height: 57px;
 
         margin-top: 3px;
-        padding: 13px 15px;
 
-        font-size: 13px;
+        padding: 14px 15px;
+
+        font-size: 15px;
+        font-weight: 700;
+
         line-height: 1.4;
         letter-spacing: 0.2px;
-    }
-
-    /* COPYRIGHT FINAL */
-
-    .desv-final-footer-slot {
-        width: 100%;
-    }
-
-    .desv-final-footer-slot .desv-copyright {
-        width: 100%;
     }
 
 }
 
 
 /* =====================================================
-   3. CELULARES MENORES — 400px
+   3. CELULARES MENORES — ATÉ 400px
 ===================================================== */
 
 @media (max-width: 400px) {
 
-    /* =====================================
-       VSL
-    ===================================== */
+    /* VSL */
 
     .desv-hero {
-        padding: 25px 14px 0;
+        padding: 13px 13px 0;
     }
 
     .desv-container {
-        max-width: 100%;
+        min-height: calc(100vh - 13px);
+        min-height: calc(100svh - 13px);
     }
 
     .desv-brand {
         max-width: 280px;
-        margin-bottom: 18px;
+        margin-bottom: 10px;
     }
 
     .desv-brand-name {
@@ -3202,43 +3206,82 @@ display: none;
     }
 
     .desv-flower {
-        width: 24px;
+        width: 25px;
         height: 22px;
     }
 
+
+    /* TÍTULO PRINCIPAL */
+
     .desv-headline h1 {
         font-size: 29px;
-        line-height: 1.08;
+        line-height: 1.1;
+        letter-spacing: -0.5px;
+    }
+
+
+    /* FRASE ROSA */
+
+    .desv-reveal {
+        margin-top: 9px;
     }
 
     .desv-reveal-text {
-        font-size: 23px;
+        font-size: 30px;
         line-height: 1.12;
+        letter-spacing: -0.6px;
+        text-align: center;
+        text-wrap: balance;
     }
+
+
+    /* DESCRIÇÃO */
 
     .desv-description {
-        margin: 14px auto 18px;
-
-        font-size: 13px;
-        line-height: 1.6;
+        margin: 11px auto 14px;
+        font-size: 14px;
+        line-height: 1.65;
     }
 
+
+    /* VÍDEO */
+
     .desv-video-frame {
+        aspect-ratio: 1.5 / 1;
         border-radius: 11px;
     }
 
+
+    /* BOTÃO */
+
     .desv-cta {
-        min-height: 51px;
-
-        margin-top: 17px;
-
-        padding: 12px 13px;
-
-        font-size: 12.5px;
+        min-height: 55px;
+        margin-top: 13px;
+        padding: 12px 12px;
+        font-size: 14px;
     }
 
+
+    /* RODAPÉ */
+
+    .desv-initial-footer-slot {
+        width: calc(100% + 26px);
+        margin-left: -13px;
+        margin-right: -13px;
+    }
+
+    .desv-copyright {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 11px 8px;
+        font-size: 10.5px;
+    }
+
+
+    /* GARANTIAS */
+
     .desv-assurances {
-        gap: 5px;
+        gap: 4px;
     }
 
     .desv-assurance {
@@ -3246,36 +3289,29 @@ display: none;
     }
 
     .desv-assurance svg {
-        width: 23px;
-        height: 23px;
+        width: 22px;
+        height: 22px;
     }
 
     .desv-assurance span {
         font-size: 7.5px;
-        letter-spacing: 0;
+        line-height: 1.3;
     }
 
     .desv-assurance-divider {
-        height: 25px;
+        height: 24px;
     }
 
     .desv-footer-phrase {
         font-size: 16px;
-        margin: 10px auto 17px;
-    }
-
-    .desv-copyright {
-        padding: 13px 10px;
-        font-size: 10px;
+        margin: 6px auto 8px;
     }
 
 
-    /* =====================================
-       CARDS DA HISTÓRIA
-    ===================================== */
+    /* HISTÓRIA */
 
     .desv-story-content {
-        padding: 28px 13px 40px;
+        padding: 27px 13px 40px;
         gap: 19px;
     }
 
@@ -3285,25 +3321,27 @@ display: none;
     .desv-story-card-process {
         padding: 23px 15px;
         gap: 13px;
-
         border-radius: 14px;
     }
 
-    .desv-story-card h2,
+    .desv-story-card h2 {
+        font-size: 21px;
+        line-height: 1.2;
+    }
+
     .desv-story-card-intro h2 {
-        font-size: 20px;
-        line-height: 1.17;
-        letter-spacing: -0.3px;
+        font-size: 21px;
     }
 
     .desv-story-card p {
-        font-size: 13px;
-        line-height: 1.65;
+        font-size: 14px;
+        line-height: 1.7;
     }
 
     .desv-story-list li {
         padding: 11px 11px 11px 32px;
-        font-size: 12.5px;
+        font-size: 13.5px;
+        line-height: 1.6;
     }
 
     .desv-story-list li::before {
@@ -3321,13 +3359,11 @@ display: none;
     }
 
     .desv-process-step p {
-        font-size: 12.5px;
+        font-size: 13.5px;
     }
 
 
-    /* =====================================
-       BÔNUS
-    ===================================== */
+    /* BÔNUS */
 
     .desv-bonus-section {
         padding: 36px 13px 42px;
@@ -3353,18 +3389,18 @@ display: none;
     }
 
     .desv-bonus-card p {
-        font-size: 13px;
+        font-size: 14px;
+        line-height: 1.7;
     }
 
     .desv-bonus-note {
         padding: 12px;
-        font-size: 11.5px;
+        font-size: 13px;
+        line-height: 1.6;
     }
 
 
-    /* =====================================
-       OFERTA
-    ===================================== */
+    /* OFERTA */
 
     .desv-offer-section {
         padding: 36px 13px 42px;
@@ -3372,7 +3408,7 @@ display: none;
     }
 
     .desv-offer-heading h2 {
-        font-size: 26px;
+        font-size: 27px;
     }
 
     .desv-offer-card {
@@ -3397,12 +3433,12 @@ display: none;
     }
 
     .desv-offer-item-content h3 {
-        font-size: 16px;
+        font-size: 17px;
     }
 
     .desv-offer-item-content p {
-        font-size: 12px;
-        line-height: 1.6;
+        font-size: 13.5px;
+        line-height: 1.65;
     }
 
     .desv-offer-price {
@@ -3414,15 +3450,13 @@ display: none;
     }
 
     .desv-offer-button {
-        min-height: 50px;
-        font-size: 12px;
+        min-height: 53px;
+        font-size: 14px;
         padding: 12px 10px;
     }
 
 
-    /* =====================================
-       FAQ
-    ===================================== */
+    /* FAQ */
 
     .desv-faq-section {
         padding: 33px 13px 36px;
@@ -3434,7 +3468,7 @@ display: none;
     }
 
     .desv-faq-heading p {
-        font-size: 11.5px;
+        font-size: 13px;
     }
 
     .desv-faq-card {
@@ -3450,8 +3484,8 @@ display: none;
     }
 
     .desv-faq-answer p {
-        font-size: 12.5px;
-        line-height: 1.6;
+        font-size: 13.5px;
+        line-height: 1.65;
     }
 
     .desv-faq-arrow {
@@ -3464,9 +3498,7 @@ display: none;
     }
 
 
-    /* =====================================
-       FECHAMENTO
-    ===================================== */
+    /* FECHAMENTO */
 
     .desv-closing-section {
         padding: 35px 13px;
@@ -3489,8 +3521,8 @@ display: none;
     }
 
     .desv-closing-content > p:not(.desv-closing-eyebrow) {
-        font-size: 13px;
-        line-height: 1.65;
+        font-size: 14px;
+        line-height: 1.7;
     }
 
     .desv-closing-product {
@@ -3506,15 +3538,14 @@ display: none;
     }
 
     .desv-closing-price span {
-        font-size: 10px;
+        font-size: 11px;
     }
 
     .desv-closing-button {
-        min-height: 50px;
+        min-height: 53px;
         padding: 12px 10px;
-
-        font-size: 12px;
-        line-height: 1.35;
+        font-size: 14px;
+        line-height: 1.4;
     }
 
 }
