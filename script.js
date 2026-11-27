@@ -1,3 +1,4 @@
+
 (() => {
 
   // =========================================
@@ -33,6 +34,42 @@
   const faqCounter = faqSection
     ? faqSection.querySelector(".desv-faq-counter")
     : null;
+
+
+  // =========================================
+  // FRASE COM EFEITO DE DIGITAÇÃO
+  // =========================================
+
+  const revealText = document.querySelector(".desv-reveal-text");
+
+  if (revealText) {
+
+    const phrase = revealText.dataset.text;
+
+    revealText.textContent = "";
+
+    let letterIndex = 0;
+
+    const typingSpeed = 55;
+
+    function typeRevealText() {
+
+      if (letterIndex < phrase.length) {
+
+        revealText.textContent += phrase.charAt(letterIndex);
+
+        letterIndex++;
+
+        setTimeout(typeRevealText, typingSpeed);
+
+      }
+
+    }
+
+    // Pequeno intervalo antes de começar a escrita
+    setTimeout(typeRevealText, 200);
+
+  }
 
 
   // =========================================
