@@ -157,7 +157,7 @@ body {
 
     flex-shrink: 0;
 
-    color: var(--rose-accent);
+    color: var(--gold);
 }
 
 .desv-brand-name {
@@ -174,7 +174,7 @@ body {
     font-weight: 700;
     letter-spacing: 3.5px;
 
-    color: var(--rose-accent);
+    color: var(--gold);
 
     white-space: nowrap;
 }
@@ -233,6 +233,7 @@ body {
     color: var(--text-dark);
 
     max-width: 100%;
+    margin-top: 35px;
 }
 
 
@@ -386,6 +387,8 @@ body {
         0 0 0 1px rgba(243, 221, 168, 0.45),
         0 8px 25px rgba(33, 3, 8, 0.13),
         inset 0 0 12px rgba(243, 221, 168, 0.10);
+
+  margin-top: -40px;
 }
 
 /* VÍDEO DENTRO DA MOLDURA */
@@ -1225,6 +1228,7 @@ display: none;
 .desv-offer-heading h2 span {
     display: block;
     color: var(--rose-accent);
+    font-weight: 900;
 }
 
 .desv-offer-card {
@@ -1343,7 +1347,7 @@ display: none;
     gap: 8px;
     padding: 26px 20px;
     text-align: center;
-    background: linear-gradient( 145deg, #743d48bf, #743d48cf );
+    background: linear-gradient( 145deg, #420d18, #2d050c );
     border: 1px solid rgba(166, 94, 112, 0.28);
     border-radius: 18px;
 }
@@ -1430,195 +1434,379 @@ display: none;
         inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }
 
-
 /* =========================================
-   FAQ
+   FAQ — IDENTIDADE E CARROSSEL
 ========================================= */
 
 .desv-faq-section {
     position: relative;
     width: 100%;
 
-    padding: 65px 7% 75px;
+    padding: 85px 7% 90px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 35px;
 
-    background: radial-gradient( ellipse at 15% 80%, rgba(255, 235, 231, 0.13), transparent 40% ), linear-gradient( 180deg, #efe4d4 0%, #ebaaa4 45%, #fecdbe 68%, #fabfac 84%, #ffd5c9cc 100% );
+    background:
+        radial-gradient(
+            ellipse at 15% 80%,
+            rgba(255, 235, 231, 0.18),
+            transparent 40%
+        ),
+        linear-gradient(
+            180deg,
+            #efe4d4 0%,
+            #ebaaa4 45%,
+            #fecdbe 68%,
+            #fabfac 84%,
+            #ffd5c9cc 100%
+        );
+
+    overflow: hidden;
 }
 
+
+/* =========================================
+   TÍTULO
+========================================= */
 
 .desv-faq-heading {
+    position: relative;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
 
     text-align: center;
-}
 
-.desv-faq-symbol {
-  display: none;
+    width: 100%;
+    max-width: 850px;
 }
 
 .desv-faq-heading h2 {
     font-family: var(--serif);
-    font-size: 39px;
-    line-height: 1.12;
+
+    font-size: 38px;
+    line-height: 1.15;
     font-weight: 600;
 
-    color: #fffaf3;
-    text-transform: uppercase;
-}
-
-.desv-faq-heading h2 span {
-    display: block;
     color: var(--gold-dark);
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.desv-faq-list {
-    width: 100%;
-    max-width: 790px;
+.desv-faq-heading p {
+    font-family: var(--sans);
 
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 400;
+
+    color: #79504c;
+
+    letter-spacing: 0.4px;
 }
 
-.desv-faq-item {
-    width: 100%;
 
-    background: rgba(255, 250, 243, 0.96);
+/* =========================================
+   CARROSSEL
+========================================= */
 
-    border: 1px solid rgba(232, 199, 126, 0.35);
-    border-radius: 14px;
-
-    box-shadow:
-        0 7px 20px rgba(33, 3, 8, 0.08);
-
-    overflow: hidden;
-
-    transition:
-        background 0.3s ease,
-        border-color 0.3s ease,
-        box-shadow 0.3s ease;
-}
-
-.desv-faq-item[open] {
-    background: #fffaf3;
-
-    border-color: rgba(232, 199, 126, 0.65);
-
-    box-shadow:
-        0 12px 26px rgba(33, 3, 8, 0.12);
-}
-
-.desv-faq-item summary {
+.desv-faq-carousel {
     position: relative;
+
+    width: 100%;
+    max-width: 1000px;
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+    justify-content: center;
 
-    padding: 20px 23px;
-
-    font-family: var(--sans);
-    font-size: 14px;
-    line-height: 1.6;
-    font-weight: 600;
-
-    color: #542832;
-
-    cursor: pointer;
-    list-style: none;
+    gap: 22px;
 }
 
-.desv-faq-item summary::-webkit-details-marker {
-    display: none;
-}
 
-.desv-faq-item summary::marker {
-    content: "";
-}
+/* =========================================
+   ÁREA DOS CARDS
+========================================= */
 
-.desv-faq-toggle {
+.desv-faq-track {
     position: relative;
 
-    width: 29px;
-    height: 29px;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    width: 100%;
+    max-width: 760px;
+
+    min-width: 0;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.desv-faq-card {
+    grid-area: 1 / 1;
+
+    position: relative;
+
+    width: 100%;
+    min-height: 290px;
+
+    padding: 40px 45px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #4a101d 0%,
+            #350710 55%,
+            #260308 100%
+        );
+
+    border: 1px solid rgba(232, 199, 126, 0.48);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 18px 40px rgba(33, 3, 8, 0.13),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateX(35px);
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.45s ease,
+        transform 0.45s ease,
+        visibility 0.45s ease,
+        box-shadow 0.35s ease;
+}
+
+
+/* CARD ATIVO */
+
+.desv-faq-card.is-active {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateX(0);
+
+    pointer-events: auto;
+
+    z-index: 2;
+}
+
+
+/* =========================================
+   NUMERAÇÃO
+========================================= */
+
+.desv-faq-number {
+    display: block;
+
+    margin-bottom: 22px;
+
+    font-family: var(--sans);
+
+    font-size: 11px;
+    font-weight: 500;
+
+    letter-spacing: 2.5px;
+
+    color: var(--gold);
+
+    opacity: 0.9;
+}
+
+
+/* =========================================
+   PERGUNTA
+========================================= */
+
+.desv-faq-card h3 {
+    width: 100%;
+    max-width: 600px;
+
+    margin-bottom: 22px;
+
+    font-family: var(--serif);
+
+    font-size: 27px;
+    line-height: 1.4;
+    font-weight: 600;
+
+    color: #fff8f0;
+}
+
+
+/* =========================================
+   RESPOSTA
+========================================= */
+
+.desv-faq-answer {
+    width: 100%;
+    max-width: 570px;
+}
+
+.desv-faq-answer p {
+    font-family: var(--sans);
+
+    font-size: 14px;
+    line-height: 1.9;
+    font-weight: 400;
+
+    color: #f3e4db;
+
+    opacity: 0.94;
+}
+
+
+/* =========================================
+   SETAS
+========================================= */
+
+.desv-faq-arrow {
+    position: relative;
+
+    width: 48px;
+    height: 48px;
+
     flex-shrink: 0;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    border: 1px solid rgba(166, 94, 112, 0.35);
+    border: 1px solid rgba(166, 115, 55, 0.55);
+
     border-radius: 50%;
 
-    background: rgba(201, 109, 120, 0.10);
+    background: rgba(255, 248, 240, 0.35);
+
+    cursor: pointer;
 
     transition:
+        background 0.3s ease,
         transform 0.3s ease,
-        background 0.3s ease;
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
-.desv-faq-toggle::before,
-.desv-faq-toggle::after {
-    content: "";
+.desv-faq-arrow span {
+    font-size: 23px;
+    line-height: 1;
 
-    position: absolute;
+    color: #6b2636;
 
-    width: 10px;
-    height: 1.5px;
-
-    background: #a65e70;
-
-    border-radius: 2px;
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
 }
 
-.desv-faq-toggle::after {
-    transform: rotate(90deg);
 
-    transition: transform 0.3s ease;
+/* HOVER */
+
+.desv-faq-arrow:hover {
+    background: #6b2636;
+
+    border-color: var(--gold);
+
+    box-shadow:
+        0 5px 16px rgba(33, 3, 8, 0.13);
+
+    transform: scale(1.06);
 }
 
-.desv-faq-item[open] .desv-faq-toggle {
-    background: rgba(201, 109, 120, 0.18);
+.desv-faq-arrow:hover span {
+    color: #fff8f0;
 }
 
-.desv-faq-item[open] .desv-faq-toggle::after {
-    transform: rotate(0deg);
+
+/* =========================================
+   INDICADORES
+========================================= */
+
+.desv-faq-navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 13px;
 }
 
-.desv-faq-answer {
-    padding: 0 23px 22px;
+.desv-faq-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    animation: desv-faq-appearance 0.3s ease;
+    gap: 9px;
 }
 
-.desv-faq-answer p {
+
+/* DOTS */
+
+.desv-faq-dot {
+    width: 8px;
+    height: 8px;
+
+    padding: 0;
+
+    border: 1px solid #9e6465;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    transition:
+        width 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.desv-faq-dot.is-active {
+    width: 23px;
+
+    border-color: #6b2636;
+
+    background: #6b2636;
+
+    border-radius: 10px;
+}
+
+
+/* CONTADOR */
+
+.desv-faq-counter {
     font-family: var(--sans);
-    font-size: 13px;
-    line-height: 1.8;
-    font-weight: 400;
 
-    color: #634b46;
+    font-size: 11px;
+    font-weight: 500;
+
+    letter-spacing: 2px;
+
+    color: #79504c;
 }
 
-@keyframes desv-faq-appearance {
-    from {
-        opacity: 0;
-        transform: translateY(-5px);
-    }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+
 
 
 /* =========================================
@@ -1722,6 +1910,7 @@ display: none;
 .desv-closing-content h2 span {
     display: block;
     color: var(--rose-accent);
+    font-weight: 900;
 }
 
 .desv-closing-divider {
@@ -1768,11 +1957,12 @@ display: none;
 .desv-closing-product span {
     font-size: 21px;
     color: #a65e70;
+    font-weight: 800;
 }
 
 .desv-closing-price {
-    font-family: var(--sans);
-    font-size: 33px;
+    font-family: serif;
+    font-size: 50px;
     font-weight: 700;
 
     color: #542832;
